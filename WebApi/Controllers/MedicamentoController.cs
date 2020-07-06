@@ -10,23 +10,32 @@ using System.Web.Http.Cors;
 
 namespace WebApi.Controllers
 {
+
     [EnableCors(origins: "*", headers: "*", methods: "GET,POST", exposedHeaders: "X-My-Header")]
-    public class DoctorController : ApiController
+
+    public class MedicamentoController : ApiController
     {
         [HttpGet]
         [AllowAnonymous]
-        [Route("api/ObtenerDoctor")]
-        public HttpResponseMessage ObtenerDoctor()
+        [Route("api/ObtenerMedicamento")]
+        public HttpResponseMessage ObtenerMedicamento()
         {
             try
             {
-                DoctorRepository doctorRepository = new DoctorRepository();
-                var result = doctorRepository.ListarDoctor();
-
+                MedicamentoRepository medicamentoRepository = new MedicamentoRepository();
+                var result = medicamentoRepository.ListarMedicamento();
+                //var totales = registros.totalDatos(codDep);
                 return Request.CreateResponse(HttpStatusCode.OK, new
                 {
                     success = true,
                     result
+                    /*data = new
+                    {
+                        totalConfirmados = totales.confirmados,
+                        totalRecuperados = totales.recuperados,
+                        totalFallecidos = totales.fallecidos,
+                        result
+                    }*/
                 });
             }
             catch (Exception e)
@@ -42,13 +51,13 @@ namespace WebApi.Controllers
 
         [HttpPost]
         [AllowAnonymous]
-        [Route("api/GuardarDoctor")]
-        public HttpResponseMessage GuardarDoctor(Doctor doctor)
+        [Route("api/GuardarMedicamento")]
+        public HttpResponseMessage GuardarMedicamento(Medicamentos medicamentos)
         {
             try
             {
-                DoctorRepository doctorRepository = new DoctorRepository();
-                var result = doctorRepository.InsertDoctor(doctor);
+                MedicamentoRepository medicamentoRepository = new MedicamentoRepository();
+                var result = medicamentoRepository.InsertMedicamento(medicamentos);
                 return Request.CreateResponse(HttpStatusCode.OK, new
                 {
                     success = true,
@@ -66,13 +75,13 @@ namespace WebApi.Controllers
         }
         [HttpPost]
         [AllowAnonymous]
-        [Route("api/EliminarDoctor")]
-        public HttpResponseMessage EliminarDoctor(int codDoctor)
+        [Route("api/EliminarMedicamento")]
+        public HttpResponseMessage EliminarMedicamento(int codMedicamento)
         {
             try
             {
-                DoctorRepository doctorRepository = new DoctorRepository();
-                var result = doctorRepository.DeleteDoctor(codDoctor);
+                MedicamentoRepository medicamentoRepository = new MedicamentoRepository();
+                var result = medicamentoRepository.DeleteMedicamento(codMedicamento);
                 return Request.CreateResponse(HttpStatusCode.OK, new
                 {
                     success = true,
@@ -88,15 +97,15 @@ namespace WebApi.Controllers
                 });
             }
         }
-        [HttpPut]
+        [HttpPost]
         [AllowAnonymous]
-        [Route("api/ActualizarDoctor")]
-        public HttpResponseMessage ActualizarDoctor(Doctor doctor)
+        [Route("api/ActulizarMedicamento")]
+        public HttpResponseMessage ActulizarMedicamento(Medicamentos medicamentos)
         {
             try
             {
-                DoctorRepository doctorRepository = new DoctorRepository();
-                var result = doctorRepository.UpdateDoctor(doctor);
+                MedicamentoRepository medicamentoRepository = new MedicamentoRepository();
+                var result = medicamentoRepository.UpdateMedicamento(medicamentos);
                 return Request.CreateResponse(HttpStatusCode.OK, new
                 {
                     success = true,
@@ -112,9 +121,6 @@ namespace WebApi.Controllers
                 });
             }
         }
-
-
-
 
     }
 }

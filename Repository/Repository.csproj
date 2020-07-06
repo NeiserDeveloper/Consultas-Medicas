@@ -44,6 +44,8 @@
   <ItemGroup>
     <Compile Include="ConexionBD.cs" />
     <Compile Include="DoctorRepository.cs" />
+    <Compile Include="EspecialidadRepository.cs" />
+    <Compile Include="MedicamentoRepository.cs" />
     <Compile Include="PacienteRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

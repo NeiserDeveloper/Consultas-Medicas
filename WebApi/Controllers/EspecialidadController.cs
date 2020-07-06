@@ -11,22 +11,31 @@ using System.Web.Http.Cors;
 namespace WebApi.Controllers
 {
     [EnableCors(origins: "*", headers: "*", methods: "GET,POST", exposedHeaders: "X-My-Header")]
-    public class DoctorController : ApiController
+
+    public class EspecialidadController : ApiController
     {
+
         [HttpGet]
         [AllowAnonymous]
-        [Route("api/ObtenerDoctor")]
-        public HttpResponseMessage ObtenerDoctor()
+        [Route("api/ObtenerEspecialidad")]
+        public HttpResponseMessage ObtenerEspecialidad()
         {
             try
             {
-                DoctorRepository doctorRepository = new DoctorRepository();
-                var result = doctorRepository.ListarDoctor();
-
+                EspecialidadRepository especialidadRepository = new EspecialidadRepository();
+                var result = especialidadRepository.ListarEspecialidad();
+                //var totales = registros.totalDatos(codDep);
                 return Request.CreateResponse(HttpStatusCode.OK, new
                 {
                     success = true,
                     result
+                    /*data = new
+                    {
+                        totalConfirmados = totales.confirmados,
+                        totalRecuperados = totales.recuperados,
+                        totalFallecidos = totales.fallecidos,
+                        result
+                    }*/
                 });
             }
             catch (Exception e)
@@ -42,13 +51,13 @@ namespace WebApi.Controllers
 
         [HttpPost]
         [AllowAnonymous]
-        [Route("api/GuardarDoctor")]
-        public HttpResponseMessage GuardarDoctor(Doctor doctor)
+        [Route("api/GuardarEspecialidad")]
+        public HttpResponseMessage GuardarEspecialidad(Especialidad especialidad)
         {
             try
             {
-                DoctorRepository doctorRepository = new DoctorRepository();
-                var result = doctorRepository.InsertDoctor(doctor);
+                EspecialidadRepository especialidadRepository = new EspecialidadRepository();
+                var result = especialidadRepository.InsertEspecialidad(especialidad);
                 return Request.CreateResponse(HttpStatusCode.OK, new
                 {
                     success = true,
@@ -66,13 +75,13 @@ namespace WebApi.Controllers
         }
         [HttpPost]
         [AllowAnonymous]
-        [Route("api/EliminarDoctor")]
-        public HttpResponseMessage EliminarDoctor(int codDoctor)
+        [Route("api/EliminarEspecialidad")]
+        public HttpResponseMessage EliminarEspecialidad(int codEspecialidad)
         {
             try
             {
-                DoctorRepository doctorRepository = new DoctorRepository();
-                var result = doctorRepository.DeleteDoctor(codDoctor);
+                EspecialidadRepository especialidadRepository = new EspecialidadRepository();
+                var result = especialidadRepository.DeleteEspecialidad(codEspecialidad);
                 return Request.CreateResponse(HttpStatusCode.OK, new
                 {
                     success = true,
@@ -88,15 +97,15 @@ namespace WebApi.Controllers
                 });
             }
         }
-        [HttpPut]
+        [HttpPost]
         [AllowAnonymous]
-        [Route("api/ActualizarDoctor")]
-        public HttpResponseMessage ActualizarDoctor(Doctor doctor)
+        [Route("api/ActulizarEspecialidad")]
+        public HttpResponseMessage ActulizarEspecialidad(Especialidad especialidad)
         {
             try
             {
-                DoctorRepository doctorRepository = new DoctorRepository();
-                var result = doctorRepository.UpdateDoctor(doctor);
+                EspecialidadRepository especialidadRepository = new EspecialidadRepository();
+                var result = especialidadRepository.UpdateEspecialidad(especialidad);
                 return Request.CreateResponse(HttpStatusCode.OK, new
                 {
                     success = true,
@@ -112,9 +121,6 @@ namespace WebApi.Controllers
                 });
             }
         }
-
-
-
 
     }
 }
