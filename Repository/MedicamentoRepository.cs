@@ -50,8 +50,8 @@ namespace Repository
                 SqlCommand sqlCommand = new SqlCommand();
                 sqlCommand.Connection = conexion.AbrirConexion();
 
-                sqlCommand.CommandText = "delete [USP_U_EliminarMedicamento]";
-                sqlCommand.CommandType = CommandType.Text;
+                sqlCommand.CommandText = "[USP_U_EliminarMedicamento]";
+                sqlCommand.CommandType = CommandType.StoredProcedure;
                 sqlCommand.Parameters.AddWithValue("@p_CodMedicamento", codMedicamento);
                 sqlCommand.ExecuteNonQuery();
                 sqlCommand.Parameters.Clear();
@@ -92,7 +92,8 @@ namespace Repository
 
             comando.CommandText = "[USP_U_ActualizarMedicamento]";
             comando.CommandType = CommandType.StoredProcedure;
-            comando.Parameters.AddWithValue("@p_Nombre", medicamentos.Nombre);
+            comando.Parameters.AddWithValue("@p_CodMedicamento", medicamentos.CodMedicamento);
+            comando.Parameters.AddWithValue("@p_Nombres", medicamentos.Nombre);
             comando.Parameters.AddWithValue("@p_Concentracion", medicamentos.Concentracion);
             comando.Parameters.AddWithValue("@p_Forma", medicamentos.Forma);
             comando.Parameters.AddWithValue("@p_Presentacion", medicamentos.Presentacion);

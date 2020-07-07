@@ -75,7 +75,7 @@ namespace WebApi.Controllers
         }
         [HttpPost]
         [AllowAnonymous]
-        [Route("api/EliminarEspecialidad")]
+        [Route("api/EliminarEspecialidad/{codEspecialidad}")]
         public HttpResponseMessage EliminarEspecialidad(int codEspecialidad)
         {
             try
@@ -99,7 +99,7 @@ namespace WebApi.Controllers
         }
         [HttpPost]
         [AllowAnonymous]
-        [Route("api/ActulizarEspecialidad")]
+        [Route("api/ActualizarEspecialidad")]
         public HttpResponseMessage ActulizarEspecialidad(Especialidad especialidad)
         {
             try

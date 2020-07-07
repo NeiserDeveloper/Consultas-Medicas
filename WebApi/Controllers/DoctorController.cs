@@ -66,7 +66,7 @@ namespace WebApi.Controllers
         }
         [HttpPost]
         [AllowAnonymous]
-        [Route("api/EliminarDoctor")]
+        [Route("api/EliminarDoctor/{codDoctor}")]
         public HttpResponseMessage EliminarDoctor(int codDoctor)
         {
             try
@@ -88,7 +88,7 @@ namespace WebApi.Controllers
                 });
             }
         }
-        [HttpPut]
+        [HttpPost]
         [AllowAnonymous]
         [Route("api/ActualizarDoctor")]
         public HttpResponseMessage ActualizarDoctor(Doctor doctor)

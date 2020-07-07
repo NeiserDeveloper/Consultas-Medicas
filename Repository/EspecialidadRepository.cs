@@ -45,8 +45,8 @@ namespace Repository
                 SqlCommand sqlCommand = new SqlCommand();
                 sqlCommand.Connection = conexion.AbrirConexion();
 
-                sqlCommand.CommandText = "delete [USP_U_EliminarEspecialidad]";
-                sqlCommand.CommandType = CommandType.Text;
+                sqlCommand.CommandText = "[USP_U_EliminarEspecialidad]";
+                sqlCommand.CommandType = CommandType.StoredProcedure;
                 sqlCommand.Parameters.AddWithValue("@p_CodEspecialidad", codEspecialidad);
                 sqlCommand.ExecuteNonQuery();
                 sqlCommand.Parameters.Clear();
@@ -83,6 +83,8 @@ namespace Repository
 
             comando.CommandText = "[USP_U_ActualizarEspecialidad]";
             comando.CommandType = CommandType.StoredProcedure;
+
+            comando.Parameters.AddWithValue("@p_CodEspecialidad", especialidad.CodEspecialidad);
             comando.Parameters.AddWithValue("@p_Nombres", especialidad.Nombre);
             comando.ExecuteNonQuery();
 
