@@ -28,6 +28,7 @@ namespace WebApi.Controllers
                 var result = pacienteRepository.ListarPacientes();
                 //var totales = registros.totalDatos(codDep);
                 //Linea de Prueba
+                //Linea de Test Web
                 return Request.CreateResponse(HttpStatusCode.OK, new
                 {
                     success = true,
