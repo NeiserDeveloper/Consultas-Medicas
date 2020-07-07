@@ -26,7 +26,7 @@ namespace WebApi.Controllers
             {
                 PacienteRepository pacienteRepository = new PacienteRepository();
                 var result = pacienteRepository.ListarPacientes();
-                //var totales = registros.totalDatos(codDep);
+                //var totales = registros.totalDatos(codDep) Prueba de Paginado;
                 return Request.CreateResponse(HttpStatusCode.OK, new
                 {
                     success = true,
