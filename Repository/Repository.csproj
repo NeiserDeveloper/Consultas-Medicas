@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConexionBD.cs" />
+    <Compile Include="ConsultaRepository.cs" />
     <Compile Include="DoctorRepository.cs" />
     <Compile Include="EspecialidadRepository.cs" />
     <Compile Include="MedicamentoRepository.cs" />
