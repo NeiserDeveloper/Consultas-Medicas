@@ -33,6 +33,7 @@ namespace Repository
                     consulta.Fecha = reader.GetDateTime(5);
                     consulta.Descripcion = reader.GetString(6);
                     consulta.EstadoConsulta = reader.GetInt32(7);
+
                     listadoConsulta.Add(consulta);
                 }
                 conexion.CerrarConexion();
