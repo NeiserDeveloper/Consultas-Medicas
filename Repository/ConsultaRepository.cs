@@ -81,6 +81,7 @@ namespace Repository
             comando.Parameters.AddWithValue("@p_Descripcion", consulta.Descripcion);
             comando.ExecuteNonQuery();
 
+
             comando.Parameters.Clear();
             conexion.CerrarConexion();
 
