@@ -74,9 +74,9 @@ namespace WebApi.Controllers
                 });
             }
         }
-        [HttpPost]
+        [HttpGet]
         [AllowAnonymous]
-        [Route("api/EliminarPaciente")]
+        [Route("api/EliminarPaciente/{codPaciente}")]
         public HttpResponseMessage EliminarPaciente(int codPaciente)
         {
             try

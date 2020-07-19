@@ -46,6 +46,7 @@
     <Compile Include="ConsultaRepository.cs" />
     <Compile Include="DoctorRepository.cs" />
     <Compile Include="EspecialidadRepository.cs" />
+    <Compile Include="LoginRepository.cs" />
     <Compile Include="MedicamentoRepository.cs" />
     <Compile Include="PacienteRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
