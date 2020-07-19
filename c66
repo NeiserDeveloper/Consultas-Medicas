@@ -1,0 +1,130 @@
+[33mcommit 3a6ead1da6a05f3890e84e1c2568dd6137870920[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: ANTONY GABRIEL CUMPA ESPINOZA <U19306487@utp.edu.pe>
+Date:   Sun Jul 19 16:24:56 2020 -0500
+
+    .
+
+[33mcommit 63adfa550ea6f1136b3a9fbe6e080c154a385310[m
+Merge: 7ed0308 5706a12
+Author: ANTONY GABRIEL CUMPA ESPINOZA <U19306487@utp.edu.pe>
+Date:   Sun Jul 19 14:18:09 2020 -0500
+
+    Merge branch 'master' of https://github.com/NeiserDeveloper/Consultas-Medicas
+
+[33mcommit 7ed0308a098ffb7e1da5f950adf41b5332e3b49a[m
+Author: ANTONY GABRIEL CUMPA ESPINOZA <U19306487@utp.edu.pe>
+Date:   Sun Jul 19 14:17:42 2020 -0500
+
+    Actualizar consulta
+
+[33mcommit 5706a12c9142de9425d853ed3a2222387edeb66c[m
+Merge: 93bbf4a 9b51b5e
+Author: DeveloperNeiser <neyser995p@gmail.com>
+Date:   Thu Jul 16 01:14:56 2020 -0500
+
+    Merge branch 'master' of https://github.com/NeiserDeveloper/Consultas-Medicas
+
+[33mcommit 93bbf4a3a2b254a25c88a5353910195af967647c[m
+Author: DeveloperNeiser <neyser995p@gmail.com>
+Date:   Thu Jul 16 01:12:36 2020 -0500
+
+    Authentication Users
+
+[33mcommit 9b51b5e48f95393e63a250672e104f1ec1d6319b[m
+Merge: a9d77e6 8272bf0
+Author: ANTONY GABRIEL CUMPA ESPINOZA <U19306487@utp.edu.pe>
+Date:   Tue Jul 14 22:58:12 2020 -0500
+
+    Merge branch 'master' of https://github.com/NeiserDeveloper/Consultas-Medicas
+
+[33mcommit a9d77e640e772cbf2f5c3029fe9e0d27bc6ca58a[m
+Author: ANTONY GABRIEL CUMPA ESPINOZA <U19306487@utp.edu.pe>
+Date:   Tue Jul 14 22:57:29 2020 -0500
+
+    Consultas
+
+[33mcommit 8272bf09e37218f9a611d3702a9ba83c066662d0[m
+Author: Neiser Custodio Pizan <32179085+NeiserDeveloper@users.noreply.github.com>
+Date:   Mon Jul 6 23:56:11 2020 -0500
+
+    test
+
+[33mcommit 4a84887f995ceafabfd12635ad0c4ac19c7fa50d[m
+Author: DeveloperNeiser <neyser995p@gmail.com>
+Date:   Mon Jul 6 23:43:37 2020 -0500
+
+    set
+
+[33mcommit d197008aed75281274913b586b17ed3eef21e524[m
+Merge: 88c8ca8 9a26c7c
+Author: DeveloperNeiser <neyser995p@gmail.com>
+Date:   Mon Jul 6 23:39:30 2020 -0500
+
+    Test Final
+
+[33mcommit 9a26c7c7179b70cb32939836ed37c118330f3d18[m
+Author: Neiser Custodio Pizan <32179085+NeiserDeveloper@users.noreply.github.com>
+Date:   Mon Jul 6 23:34:13 2020 -0500
+
+    Test Prueba
+
+[33mcommit 88c8ca81808c8ce534f153e295d49d046b542278[m
+Author: DeveloperNeiser <neyser995p@gmail.com>
+Date:   Mon Jul 6 23:32:26 2020 -0500
+
+    Paginado Nuevo
+
+[33mcommit 88791b9219ae80b434af1c36a145d0f1fc3d2460[m
+Merge: 9d6e148 08d554d
+Author: DeveloperNeiser <neyser995p@gmail.com>
+Date:   Mon Jul 6 23:26:54 2020 -0500
+
+    Prueba
+
+[33mcommit 9d6e1487d376eb853229cecbbcc7c20948a14f75[m
+Author: DeveloperNeiser <neyser995p@gmail.com>
+Date:   Mon Jul 6 23:21:43 2020 -0500
+
+    Paginado de prueba
+
+[33mcommit 08d554db31189421eedf7e0e882490a56b88d001[m
+Author: Neiser Custodio Pizan <32179085+NeiserDeveloper@users.noreply.github.com>
+Date:   Mon Jul 6 23:08:47 2020 -0500
+
+    Prueba Controlador Pacientes
+
+[33mcommit 428fadb68cc2dd3f3494bec91136363a1aadc4f3[m
+Author: ANTONY GABRIEL CUMPA ESPINOZA <U19306487@utp.edu.pe>
+Date:   Mon Jul 6 20:49:28 2020 -0500
+
+    Actualizar
+
+[33mcommit 83a249ecce6cbe222ae47cf5c718c9e9fd3526a9[m
+Author: ANTONY GABRIEL CUMPA ESPINOZA <U19306487@utp.edu.pe>
+Date:   Mon Jul 6 19:49:08 2020 -0500
+
+    p
+
+[33mcommit b6eed4d46049ee5111930448f4758ae14360b0b1[m
+Author: ANTONY GABRIEL CUMPA ESPINOZA <U19306487@utp.edu.pe>
+Date:   Mon Jul 6 19:33:35 2020 -0500
+
+    cambio prueba
+
+[33mcommit 49890360831810ce5570ba81d96c52c9d47bba92[m
+Author: ANTONY GABRIEL CUMPA ESPINOZA <U19306487@utp.edu.pe>
+Date:   Mon Jul 6 18:08:43 2020 -0500
+
+    Repositorio Medicamento,Doctor,Especialidad
+
+[33mcommit ddc02642d2e1aba979c86c6807975c1406ac943f[m
+Author: DeveloperNeiser <neyser995p@gmail.com>
+Date:   Sun Jul 5 16:22:51 2020 -0500
+
+    Servicios Principales
+
+[33mcommit c686c7dc071b039feef67c1d6e841c83176882c5[m
+Author: DeveloperNeiser <neyser995p@gmail.com>
+Date:   Sun Jul 5 14:06:44 2020 -0500
+
+    Carga Inicial
