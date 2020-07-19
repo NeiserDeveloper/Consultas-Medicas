@@ -32,9 +32,7 @@ namespace Repository
                     consulta.Estatura = reader.GetDecimal(4);
                     consulta.Fecha = reader.GetDateTime(5);
                     consulta.Descripcion = reader.GetString(6);
-                    consulta.Examen = reader.GetString(7);
-                    consulta.Diagnostico = reader.GetString(8);
-                    consulta.EstadoConsulta = reader.GetInt32(9);
+                    consulta.EstadoConsulta = reader.GetInt32(7);
                     listadoConsulta.Add(consulta);
                 }
                 conexion.CerrarConexion();
@@ -81,8 +79,6 @@ namespace Repository
             comando.Parameters.AddWithValue("@p_Estatura", consulta.Estatura);
             comando.Parameters.AddWithValue("@p_Fecha", consulta.Fecha);
             comando.Parameters.AddWithValue("@p_Descripcion", consulta.Descripcion);
-            comando.Parameters.AddWithValue("@p_Examen", consulta.Examen);
-            comando.Parameters.AddWithValue("@p_Diagnostico", consulta.Diagnostico);
             comando.ExecuteNonQuery();
 
             comando.Parameters.Clear();
@@ -105,8 +101,6 @@ namespace Repository
             comando.Parameters.AddWithValue("@p_Estatura", consulta.Estatura);
             comando.Parameters.AddWithValue("@p_Fecha", consulta.Fecha);
             comando.Parameters.AddWithValue("@p_Descripcion", consulta.Descripcion);
-            comando.Parameters.AddWithValue("@p_Examen", consulta.Examen);
-            comando.Parameters.AddWithValue("@p_Diagnostico", consulta.Diagnostico);
             comando.ExecuteNonQuery();
 
             comando.Parameters.Clear();
