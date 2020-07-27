@@ -27,12 +27,19 @@ namespace Repository
                     Consulta consulta = new Consulta();
                     consulta.CodConsulta = reader.GetInt32(0);
                     consulta.Tipo = reader.GetInt32(1);
-                    consulta.CodPaciente = reader.GetInt32(2);
-                    consulta.Peso = reader.GetDecimal(3);
-                    consulta.Estatura = reader.GetDecimal(4);
-                    consulta.Fecha = reader.GetDateTime(5);
-                    consulta.Descripcion = reader.GetString(6);
-                    consulta.EstadoConsulta = reader.GetInt32(7);
+                    consulta.TipoTexto = reader.GetString(2);
+                    consulta.CodPaciente = reader.GetInt32(3);
+                    consulta.Paciente = reader.GetString(4);
+                    consulta.DireccionPaciente = reader.GetString(5);
+                    consulta.Peso = reader.GetDecimal(6);
+                    consulta.Estatura = reader.GetDecimal(7);
+                    consulta.Fecha = reader.GetDateTime(8);
+                    consulta.FechaFormato = reader.GetString(9);
+                    consulta.Descripcion = reader.GetString(10);
+                    consulta.EstadoConsulta = reader.GetInt32(11);
+                    consulta.EstConsultaTexto = reader.GetString(12);
+                    //consulta.Estado = reader.GetInt32(13);
+                    consulta.Observacion = reader.GetString(14);
                     listadoConsulta.Add(consulta);
                 }
                 conexion.CerrarConexion();
@@ -79,6 +86,7 @@ namespace Repository
             comando.Parameters.AddWithValue("@p_Estatura", consulta.Estatura);
             comando.Parameters.AddWithValue("@p_Fecha", consulta.Fecha);
             comando.Parameters.AddWithValue("@p_Descripcion", consulta.Descripcion);
+            comando.Parameters.AddWithValue("@p_Observacion", consulta.Observacion);
             comando.ExecuteNonQuery();
 
 
@@ -102,6 +110,7 @@ namespace Repository
             comando.Parameters.AddWithValue("@p_Estatura", consulta.Estatura);
             comando.Parameters.AddWithValue("@p_Fecha", consulta.Fecha);
             comando.Parameters.AddWithValue("@p_Descripcion", consulta.Descripcion);
+            comando.Parameters.AddWithValue("@p_Observacion", consulta.Observacion);
             comando.ExecuteNonQuery();
 
             comando.Parameters.Clear();
