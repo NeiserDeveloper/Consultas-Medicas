@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AtenderConsultaRepository.cs" />
     <Compile Include="ConexionBD.cs" />
     <Compile Include="ConsultaRepository.cs" />
     <Compile Include="DoctorRepository.cs" />

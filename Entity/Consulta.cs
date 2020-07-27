@@ -18,6 +18,7 @@ namespace Entity
         public DateTime Fecha { get; set; }
         public string FechaFormato { get; set; }
         public string Descripcion { get; set; }
+
         public int EstadoConsulta { get; set; }
         public string EstConsultaTexto { get; set; }
         public int Estado { get; set; }

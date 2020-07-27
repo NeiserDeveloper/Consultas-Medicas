@@ -27,6 +27,7 @@ namespace Repository
                     Consulta consulta = new Consulta();
                     consulta.CodConsulta = reader.GetInt32(0);
                     consulta.Tipo = reader.GetInt32(1);
+<<<<<<< HEAD
                     consulta.TipoTexto = reader.GetString(2);
                     consulta.CodPaciente = reader.GetInt32(3);
                     consulta.Paciente = reader.GetString(4);
@@ -40,6 +41,15 @@ namespace Repository
                     consulta.EstConsultaTexto = reader.GetString(12);
                     //consulta.Estado = reader.GetInt32(13);
                     consulta.Observacion = reader.GetString(14);
+=======
+                    consulta.CodPaciente = reader.GetInt32(2);
+                    consulta.Peso = reader.GetDecimal(3);
+                    consulta.Estatura = reader.GetDecimal(4);
+                    consulta.Fecha = reader.GetDateTime(5);
+                    consulta.Descripcion = reader.GetString(6);
+                    consulta.EstadoConsulta = reader.GetInt32(7);
+
+>>>>>>> 3e7122a560a155bec37672f232a1b5cc8048c325
                     listadoConsulta.Add(consulta);
                 }
                 conexion.CerrarConexion();
