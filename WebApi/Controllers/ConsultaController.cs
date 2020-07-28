@@ -50,12 +50,37 @@ namespace WebApi.Controllers
         [HttpPost]
         [AllowAnonymous]
         [Route("api/GuardarConsulta")]
-        public HttpResponseMessage GuardarMedicamento(Consulta consulta)
+        public HttpResponseMessage GuardarConsulta(Consulta consulta)
         {
             try
             {
                 ConsultaRepository consultaRepository = new ConsultaRepository();
                 var result = consultaRepository.InsertConsulta(consulta);
+                return Request.CreateResponse(HttpStatusCode.OK, new
+                {
+                    success = true,
+                    result
+                });
+            }
+            catch (Exception e)
+            {
+                return Request.CreateResponse(HttpStatusCode.OK, new
+                {
+                    Success = false,
+                    Error = e.Message
+                });
+            }
+        }
+
+        [HttpPost]
+        [AllowAnonymous]
+        [Route("api/GuardarConsultaVirtual")]
+        public HttpResponseMessage GuardarConsultaVirtual(Consulta.SaveVirtual consulta)
+        {
+            try
+            {
+                ConsultaRepository consultaRepository = new ConsultaRepository();
+                var result = consultaRepository.InsertConsultaVirtual(consulta);
                 return Request.CreateResponse(HttpStatusCode.OK, new
                 {
                     success = true,

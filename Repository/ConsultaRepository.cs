@@ -90,10 +90,35 @@ namespace Repository
             comando.Parameters.AddWithValue("@p_Observacion", consulta.Observacion);
             comando.ExecuteNonQuery();
 
-
             comando.Parameters.Clear();
             conexion.CerrarConexion();
 
+            return "OK";
+        }
+
+        public string InsertConsultaVirtual(Consulta.SaveVirtual saveVirtual)
+        {
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = conexion.AbrirConexion();
+
+            comando.CommandText = "[USP_I_RegistrarConsultaVirtual]";
+            comando.CommandType = CommandType.StoredProcedure;
+
+            comando.Parameters.AddWithValue("@p_Nombres", saveVirtual.Nombres);
+            comando.Parameters.AddWithValue("@p_FechaNaci", saveVirtual.FechaNacimiento);
+            comando.Parameters.AddWithValue("@p_Sexo", saveVirtual.Sexo);
+            comando.Parameters.AddWithValue("@p_Direccion", saveVirtual.Direccion);
+            comando.Parameters.AddWithValue("@p_Telefono", saveVirtual.Telefono);
+            comando.Parameters.AddWithValue("@p_Peso", saveVirtual.Peso);
+            comando.Parameters.AddWithValue("@p_Estatura", saveVirtual.Estatura);
+            comando.Parameters.AddWithValue("@p_Fecha", saveVirtual.Fecha);
+            comando.Parameters.AddWithValue("@p_Descripcion", saveVirtual.Descripcion);
+            comando.Parameters.AddWithValue("@p_Observacion", saveVirtual.Observacion);
+
+            comando.ExecuteNonQuery();
+
+            comando.Parameters.Clear();
+            conexion.CerrarConexion();
             return "OK";
         }
 
