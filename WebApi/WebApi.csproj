@@ -169,6 +169,7 @@
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MedicamentoController.cs" />
     <Compile Include="Controllers\PacienteController.cs" />
+    <Compile Include="Controllers\PagosController.cs" />
     <Compile Include="Controllers\ReporteController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">

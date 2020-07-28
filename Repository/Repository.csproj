@@ -50,6 +50,7 @@
     <Compile Include="LoginRepository.cs" />
     <Compile Include="MedicamentoRepository.cs" />
     <Compile Include="PacienteRepository.cs" />
+    <Compile Include="PagosRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
